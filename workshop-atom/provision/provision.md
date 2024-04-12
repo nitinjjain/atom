@@ -15,6 +15,9 @@ Provisioning of ODA
 
 In this lab, you will:
 * Provision ODA Instance
+    * Follow Task 1 to Task 5 to set-up ODA Instance
+* Provision VBCS Instance
+    * Followe Task 6 onwards
 
 
 
@@ -142,11 +145,54 @@ This task involves creating REST service which will be used by ODA to connect to
 
     ![Create Channel](images/create_channel_1.png)
 
-3. Step 3: After channel creation, enable the Channel by using the toggle button (screenshot) and route it to skill imported in Task 4
+3. Step 3: After channel creation, enable the Channel by using the toggle button (screenshot) and route it to skill imported in Task 4 (Take note of channelId for **Task 6** in later step)
 
     ![Create Channel](images/route_skill.png)
 
     
+
+## Task 6: Create VBCS Instance & embed ODA skill in VBCS Application (Please directly move to Step 5 incase you already have a VBCS instance provisioned)
+
+1. Step 1: Click on main hamburger menu on OCI cloud console and navigate Developer Services > Visual Builder
+
+    ![Create Channel](images/visual_builder.png)
+
+2. Step 2: Create Visual Builder Instance by providing the details and click **Create Visual Builder Instance**:
+    * **Name** = <suitable_name>
+    * **Compartment** = <same_compartment_as_oda>
+    * **Node** = <as_per_need>
+
+    ![Create Channel](images/create_vbcs.png)
+
+3. Step 3: Wait for the instance to come to **Active** (green color) status
+
+4. Step 4: Download the VB application from the provided link
+
+5. Step 5: Import the application in provisioned instance as per the screenshots
+
+    * Click on Import from Visual Builder Instance
+
+        ![Create Channel](images/import_vbapp.png)
+
+    * Choose the option as below
+
+        ![Create Channel](images/import_vbapp_1.png)
+
+    * Provide the App Name with other details and select the provided application zip file
+
+        ![Create Channel](images/import_vbapp_2.png)
+    
+6. Step 6: Once import is completed, open the index.html file in the VB Instance and update the details as follows:
+
+    * **URI** = 'https://oda-XXXXXXXXXXXXXXXXXXXXXX.data.digitalassistant.oci.oraclecloud.com/'
+    * **channelId** = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXX' 
+
+    ![Create Channel](images/vbapp_setup.png)
+
+    **Note**
+    * URI is the hostname of ODA instance provisioned in **Task 1**
+    * channelId is created during **Task 5**
+
 ## Acknowledgements
 **Author** - * **Nitin Jain**, Master Principal Cloud Architect, NACIE
              * **Abhinav Jain**, Senior Cloud Engineer, NACIE

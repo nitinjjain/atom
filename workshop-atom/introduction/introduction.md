@@ -23,13 +23,13 @@ In this workshop, you will learn how to:
 
 ### Prerequisites (Optional)
 
-*List the prerequisites for this lab using the format below. Fill in whatever knowledge, accounts, etc. is needed to complete the lab. **Do NOT list** each previous lab as a prerequisite.*
+
 
 This lab assumes you have:
 * An Oracle account
-* All previous labs successfully completed
 
-*This is the "fold" - below items are collapsed by default*
+
+
 
 In general, the Introduction does not have Steps.
 
