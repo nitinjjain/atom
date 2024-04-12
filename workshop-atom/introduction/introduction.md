@@ -41,6 +41,6 @@ In general, the Introduction does not have Steps.
 * [URL text 2](http://docs.oracle.com)
 
 ## Acknowledgements
-* **Author** - **Nitin Jain**, Master Principal Cloud Architect, NACIE
-               **Abhinav Jain**, Senior Cloud Engineer, NACIE
+**Author** - * **Nitin Jain**, Master Principal Cloud Architect, NACIE
+             * **Abhinav Jain**, Senior Cloud Engineer, NACIE
 

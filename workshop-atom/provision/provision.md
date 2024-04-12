@@ -148,6 +148,6 @@ This task involves creating REST service which will be used by ODA to connect to
 
     
 ## Acknowledgements
-* **Author** - * **Nitin Jain**, Master Principal Cloud Architect, NACIE
-               * **Abhinav Jain**, Senior Cloud Engineer, NACIE
+**Author** - * **Nitin Jain**, Master Principal Cloud Architect, NACIE
+             * **Abhinav Jain**, Senior Cloud Engineer, NACIE
 
