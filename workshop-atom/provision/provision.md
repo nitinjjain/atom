@@ -70,24 +70,27 @@ This task will help you to create desired dynamic group & necessary policy for t
 This task involves creating REST service which will be used by ODA to connect to OCI Generative AI Service. The REST Service will be created for the ODA created in **Task 1**.
 
 1. Step 1: Locate the ODA created in **Task 1**
+
     ![ODA List](images/oda_list.png) 
 
 
 2. Step 2: Select the earlier created ODA Instance and click on **Service Console**
+
     ![ODA Service Console](images/oda_provision_4.png) 
 
 
 3. Step 3: Click on hamburger menu and locate & click **API Services**
+
     ![API Services](images/oda_api_service.png) 
 
 4. Step 4: Click on **Add REST Service**. Provide the following details:
-    **Name** : <Suitable Name>
-    **Endpoint** : https://inference.generativeai.us-chicago-1.oci.oraclecloud.com/20231130/actions/generateText
-    **Description (Optional)** : <Description>
-    **Authentication Type** : OCI Resource Principal
-    **Method** : POST
-    **Request**
-    **Body**
+    * **Name** : <Suitable Name>
+    * **Endpoint** : https://inference.generativeai.us-chicago-1.oci.oraclecloud.com/20231130/actions/generateText
+    * **Description (Optional)** : <Description>
+    * **Authentication Type** : OCI Resource Principal
+    * **Method** : POST
+    * **Request**
+    * **Body**
     ```
     {
         "compartmentId": "ocid1.compartment.oc1..XXXXXXXXXXX",
