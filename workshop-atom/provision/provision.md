@@ -1,10 +1,10 @@
-# Provision ODA 
+# Provision of Oracle Digital Assistant & Visual Builder Instance
 
 ## Introduction
 
 This lab will take you thru the step needed to provision Oracle Digital Assistant & Visual Builder Cloud Service
 
-Estimated Time: 15 minutes
+Estimated Time: 120 minutes
 
 ### About Oracle Digital Assistant (Optional)
 Oracle Digital Assistant delivers a complete AI platform to create conversational experiences for business applications through text, chat, and voice interfaces
@@ -14,10 +14,10 @@ Oracle Digital Assistant delivers a complete AI platform to create conversationa
 Provisioning of ODA 
 
 In this lab, you will:
-* Provision ODA Instance
+* **Provision ODA Instance**
     * Follow Task 1 to Task 5 to set-up ODA Instance
-* Provision VBCS Instance
-    * Followe Task 6 onwards
+* **Provision VBCS Instance**
+    * Follow Task 6 
 
 
 
@@ -25,10 +25,6 @@ In this lab, you will:
 
 This lab assumes you have:
 * An Oracle Cloud account
-
-
-
-
 
 ## Task 1: Provision Oracle Digital Assistant
 
@@ -59,12 +55,11 @@ This task will help you to create desired dynamic group & necessary policy for t
 
 
     ```
-    
     Allow any-user to use ai-service-generative-ai-family in tenancy where request.principal.id='ocid1.odainstance.oc1.us-chicago-1.XXXXXXXXXXXXXXXXXXXXXXXXXX'
     Allow any-user to use generative-ai-family in tenancy where request.principal.id='ocid1.odainstance.oc1.us-chicago-1.XXXXXXXXXXXXXXXXXXXXXX'
     Allow any-user to use fn-invocation in tenancy where request.principal.id='ocid1.odainstance.oc1.us-chicago-1.XXXXXXXXXXXXXXXXXXXX'
-    
     ```
+    
     **Note:** 
     * Please make sure that the compartmentId should be the one under which the resource is  created.
     * Dynamic group name in step 2 should be the one created in step 1
