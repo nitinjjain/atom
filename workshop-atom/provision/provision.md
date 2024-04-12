@@ -45,30 +45,30 @@ This task will help you to create Oracle Digital Assistant under your choosen co
     ![Active ODA Instance](images/oda_provision_4.png) 
 
 
-## Task 2: Configure Oracle Digital Assistant
+## Task 2: Dynamic Group & Policy creation for Oracle Digital Assistant
 
 
-This task will help you to configure the Oracle Digital Assistant by provising permissions
+This task will help you to create desired dynamic group & necessary policy for the Oracle Digital Assistant 
 
 1. Step 1: Create a dynamic group having the rules for fn invocation
     ```
-    <copy>
+    
     All {instance.id = 'ocid1.odainstance.oc1.us-chicago-1.XXXXXXXXXXXXXXXX'}
     All {resource.type='odainstance', resource.compartment.id='ocid1.compartment.oc1..XXXXXXXXXXXXX' }
     ALL {resource.type = 'fnfunc', resource.compartment.id = 'ocid1.compartment.oc1..XXXXXXXXXXXXX'}
     
-    </copy>
+    
     ```
 2. Step 2: Attach the policy at the root compartment level
 
 
     ```
-    <copy>
+    
     Allow any-user to use ai-service-generative-ai-family in tenancy where request.principal.id='ocid1.odainstance.oc1.us-chicago-1.XXXXXXXXXXXXXXXXXXXXXXXXXX'
     Allow any-user to use generative-ai-family in tenancy where request.principal.id='ocid1.odainstance.oc1.us-chicago-1.XXXXXXXXXXXXXXXXXXXXXX'
     Allow any-user to use fn-invocation in tenancy where request.principal.id='ocid1.odainstance.oc1.us-chicago-1.XXXXXXXXXXXXXXXXXXXX'
     Allow dynamic-group XXXXXXXXX to use fn-invocation in tenancy
-    </copy>
+    
     ```
 
 
