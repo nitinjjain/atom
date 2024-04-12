@@ -25,7 +25,7 @@ This lab assumes you have:
 
 
 
-*This is the "fold" - below items are collapsed by default*
+
 
 ## Task 1: Provision Oracle Digital Assistant
 
@@ -50,16 +50,8 @@ This task will help you to create Oracle Digital Assistant under your choosen co
 
 This task will help you to create desired dynamic group & necessary policy for the Oracle Digital Assistant 
 
-1. Step 1: Create a dynamic group having the rules for fn invocation
-    ```
-    
-    All {instance.id = 'ocid1.odainstance.oc1.us-chicago-1.XXXXXXXXXXXXXXXX'}
-    All {resource.type='odainstance', resource.compartment.id='ocid1.compartment.oc1..XXXXXXXXXXXXX' }
-    ALL {resource.type = 'fnfunc', resource.compartment.id = 'ocid1.compartment.oc1..XXXXXXXXXXXXX'}
-    
-    
-    ```
-2. Step 2: Attach the policy at the root compartment level
+
+1. Step 1: Attach the policy at the root compartment level
 
 
     ```
@@ -67,15 +59,85 @@ This task will help you to create desired dynamic group & necessary policy for t
     Allow any-user to use ai-service-generative-ai-family in tenancy where request.principal.id='ocid1.odainstance.oc1.us-chicago-1.XXXXXXXXXXXXXXXXXXXXXXXXXX'
     Allow any-user to use generative-ai-family in tenancy where request.principal.id='ocid1.odainstance.oc1.us-chicago-1.XXXXXXXXXXXXXXXXXXXXXX'
     Allow any-user to use fn-invocation in tenancy where request.principal.id='ocid1.odainstance.oc1.us-chicago-1.XXXXXXXXXXXXXXXXXXXX'
-    Allow dynamic-group XXXXXXXXX to use fn-invocation in tenancy
     
     ```
-
-
     **Note:** 
-    Please make sure that the compartmentId should be the one under which the resource is  created.
-    Dynamic group name in step 2 should be the one created in step 1
+    * Please make sure that the compartmentId should be the one under which the resource is  created.
+    * Dynamic group name in step 2 should be the one created in step 1
+
+## Task 3: Create REST Service for the OCI Generative AI Service 
+
+This task involves creating REST service which will be used by ODA to connect to OCI Generative AI Service. The REST Service will be created for the ODA created in **Task 1**.
+
+1. Step 1: Locate the ODA created in **Task 1**
+    ![ODA List](images/oda_list.png) 
+
+
+2. Step 2: Select the earlier created ODA Instance and click on **Service Console**
+    ![ODA Service Console](images/oda_provision_4.png) 
+
+
+3. Step 3: Click on hamburger menu and locate & click **API Services**
+    ![API Services](images/oda_api_service.png) 
+
+4. Step 4: Click on **Add REST Service**. Provide the following details:
+    **Name** : <Suitable Name>
+    **Endpoint** : https://inference.generativeai.us-chicago-1.oci.oraclecloud.com/20231130/actions/generateText
+    **Description (Optional)** : <Description>
+    **Authentication Type** : OCI Resource Principal
+    **Method** : POST
+    **Request**
+    **Body**
+    ```
+    {
+        "compartmentId": "ocid1.compartment.oc1..XXXXXXXXXXX",
+        "servingMode": {
+            "modelId": "ocid1.generativeaimodel.oc1.us-chicago-1.XXXXXXXX",
+            "servingType": "ON_DEMAND"
+        },
+        "inferenceRequest": {
+            "prompt": "What is OCAF?",
+            "maxTokens": 600,
+            "temperature": 1,
+            "frequencyPenalty": 0,
+            "presencePenalty": 0,
+            "topP": 0.75,
+            "topK": 0,
+            "returnLikelihoods": "GENERATION",
+            "isStream": true,
+            "stopSequences": [],
+            "runtimeType": "COHERE"
+        }
+    }
+    ```
+5. Step 5: Click **Test Request** to make sure the connection is successful
+   ![API Services](images/oda_api_service_4.png) 
+    
+    **Note**
+    Retrieve the modelId (OCID) from OCI Gen AI Services Playground and use a compartmentId where the ODA is hosted inside
+    
+## Task 4: Import Skill (Provided)
+
+1. Step 1: Download the skill from the url provided below
+
+2. Step 2: Import the skill (downloaded). Click on **Import Skill** & select the zip file to import
+   ![Import Skill](images/import_skill.png) 
+
+## Task 5: Create Channel to embed ODA in Visual Builder Application (provided) or in any custom Web App.
+
+1. Step 1: Click on hamburger menu and select Development > Channels
+    ![Create Channel](images/create_channel.png)
+
+2. Step 2: Select the following option on the form:
+    * **Channel Type** = Oracle Web 
+    * **Allowed Domain** = *
+    ![Create Channel](images/create_channel_1.png)
+
+3. Step 3: After channel creation, enable the Channel by using the toggle button (screenshot) and route it to skill imported in Task 4
+    ![Create Channel](images/route_skill.png)
+
+    
 ## Acknowledgements
 * **Author** - **Nitin Jain**, Master Principal Cloud Architect, NACIE
-* **Contributors** -  <Name, Group> -- optional
-* **Last Updated By/Date** - <Name, Month Year>
+               **Abhinav Jain**, Senior Cloud Engineer, NACIE
+

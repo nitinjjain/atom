@@ -5,6 +5,8 @@
 This workshop will help to configure, set-up and enable AI Powered Chatbot known as ATOM on your own OCI tenancy.
 Users can either chat with the bot or upload a document to either summarize it or provide more context to the prompt. ATOM uses Oracle Digital Assistant and Gen AI LLMs in this application. By following the workshop users can install ATOM in their own tenancy
 
+![Active ODA Instance](images/atom.png) 
+
 Estimated Workshop Time: 1 hours 30 minutes 
 
 
@@ -39,6 +41,6 @@ In general, the Introduction does not have Steps.
 * [URL text 2](http://docs.oracle.com)
 
 ## Acknowledgements
-* **Author** - <Nitin Jain, Master Principal Cloud Architect, Group>
-* **Contributors** -  <Name, Group> -- optional
-* **Last Updated By/Date** - <Name, Month Year>
+* **Author** - **Nitin Jain**, Master Principal Cloud Architect, NACIE
+               **Abhinav Jain**, Senior Cloud Engineer, NACIE
+
