@@ -42,6 +42,7 @@ This task will help you to create Oracle Digital Assistant under your choosen co
     ![Create ODA](images/oda_provision_3.png)
 
 3. In few minutes the status of recently created Digital Assistant will change from **Provisioning** to **Active**
+
     ![Active ODA Instance](images/oda_provision_4.png) 
 
 
@@ -114,6 +115,7 @@ This task involves creating REST service which will be used by ODA to connect to
     }
     ```
 5. Step 5: Click **Test Request** to make sure the connection is successful
+
    ![API Services](images/oda_api_service_4.png) 
     
     **Note**
@@ -124,19 +126,24 @@ This task involves creating REST service which will be used by ODA to connect to
 1. Step 1: Download the skill from the url provided below
 
 2. Step 2: Import the skill (downloaded). Click on **Import Skill** & select the zip file to import
+
    ![Import Skill](images/import_skill.png) 
 
 ## Task 5: Create Channel to embed ODA in Visual Builder Application (provided) or in any custom Web App.
 
 1. Step 1: Click on hamburger menu and select Development > Channels
+
     ![Create Channel](images/create_channel.png)
 
 2. Step 2: Select the following option on the form:
+
     * **Channel Type** = Oracle Web 
     * **Allowed Domain** = *
+
     ![Create Channel](images/create_channel_1.png)
 
 3. Step 3: After channel creation, enable the Channel by using the toggle button (screenshot) and route it to skill imported in Task 4
+
     ![Create Channel](images/route_skill.png)
 
     
