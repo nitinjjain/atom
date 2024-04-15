@@ -184,9 +184,9 @@ This task involves creating REST service which will be used by ODA to connect to
 
     ![Create Channel](images/vbapp_setup.png)
 
-    **Note**
-    * URI is the hostname of ODA instance provisioned in **Task 1**
-    * channelId is created during **Task 5**
+    > **Note**
+    > URI is the hostname of ODA instance provisioned in **Task 1**
+    > channelId is created during **Task 5** - **Step 3**
 
 ## Acknowledgements
 **Author** - * **Nitin Jain**, Master Principal Cloud Architect, NACIE
