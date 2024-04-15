@@ -60,8 +60,8 @@ This task will help you to create desired dynamic group & necessary policy for t
     Allow any-user to use fn-invocation in tenancy where request.principal.id='ocid1.odainstance.oc1.us-chicago-1.XXXXXXXXXXXXXXXXXXXX'
     ```
     
-    **Note:** 
-    * Please make sure that the compartmentId should be the one under which the resource is  created.
+    > **Note:** 
+    > * Please make sure that the compartmentId should be the one under which the resource is  created.
    
 
 ## Task 3: Create REST Service for the OCI Generative AI Service 
@@ -116,8 +116,8 @@ This task involves creating REST service which will be used by ODA to connect to
 
    ![API Services](images/oda_api_service_4.png) 
     
-    **Note**
-    Retrieve the modelId (OCID) from OCI Gen AI Services Playground and use a compartmentId where the ODA is hosted inside
+    > **Note**
+    > * Retrieve the modelId (OCID) from OCI Gen AI Services Playground and use a compartmentId where the ODA is hosted inside
     
 ## Task 4: Import Skill (Provided)
 
