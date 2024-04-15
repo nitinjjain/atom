@@ -144,7 +144,7 @@ This task involves creating REST service which will be used by ODA to connect to
 
     ![Create Channel](images/route_skill.png)
 
-    
+    ![Create Channel](images/skill_channel.png)
 
 ## Task 6: Create VBCS Instance & embed ODA skill in VBCS Application (Please directly move to Step 5 incase you already have a VBCS instance provisioned)
 
