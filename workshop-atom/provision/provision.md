@@ -62,7 +62,7 @@ This task will help you to create desired dynamic group & necessary policy for t
     
     **Note:** 
     * Please make sure that the compartmentId should be the one under which the resource is  created.
-    * Dynamic group name in step 2 should be the one created in step 1
+   
 
 ## Task 3: Create REST Service for the OCI Generative AI Service 
 
