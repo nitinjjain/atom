@@ -45,7 +45,9 @@ This task will help you to create Oracle Digital Assistant under your choosen co
 
     ![Create ODA](images/oda_provision_3.png)
 
-3. In few minutes the status of recently created Digital Assistant will change from **Provisioning** to **Active**
+3. In few minutes the status of recently created Digital Assistant will change from **Creating** to **Active**
+   
+    ![Active ODA Instance](images/oda_provisioning.png) 
 
     ![Active ODA Instance](images/oda_provision_4.png) 
 
