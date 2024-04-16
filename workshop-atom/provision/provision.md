@@ -55,9 +55,9 @@ This task will help you to create desired dynamic group & necessary policy for t
 
 
     ```
-    Allow any-user to use ai-service-generative-ai-family in tenancy where request.principal.id='ocid1.odainstance.oc1.us-chicago-1.XXXXXXXXXXXXXXXXXXXXXXXXXX'
-    Allow any-user to use generative-ai-family in tenancy where request.principal.id='ocid1.odainstance.oc1.us-chicago-1.XXXXXXXXXXXXXXXXXXXXXX'
-    Allow any-user to use fn-invocation in tenancy where request.principal.id='ocid1.odainstance.oc1.us-chicago-1.XXXXXXXXXXXXXXXXXXXX'
+    Allow any-user to use ai-service-generative-ai-family in tenancy where request.principal.id='ocid1.odainstance.oc1.us-chicago-1.************************'
+    Allow any-user to use generative-ai-family in tenancy where request.principal.id='ocid1.odainstance.oc1.us-chicago-1.************************'
+    Allow any-user to use fn-invocation in tenancy where request.principal.id='ocid1.odainstance.oc1.us-chicago-1.************************'
     ```
     
     > **Note:** 
@@ -140,10 +140,13 @@ This task involves creating REST service which will be used by ODA to connect to
 
     ![Create Channel](images/create_channel_1.png)
 
-3. Step 3: After channel creation, enable the Channel by using the toggle button (screenshot) and route it to skill imported in Task 4 (Take note of channelId for **Task 6** in later step)
-
-    ![Create Channel](images/route_skill.png)
-
+3. Step 3: * After channel creation, enable the Channel by using the toggle button (screenshot).
+	   * Route it to skill imported in Task 4 
+   
+   ![Create Channel](images/route_skill.png)
+   
+5. Step 4: Disable the **Client Authentication Enabled** toggle. (Take note of channelId for **Task 6** in later step).
+   
     ![Create Channel](images/skill_channel.png)
 
 ## Task 6: Create VBCS Instance & embed ODA skill in VBCS Application (Please directly move to Step 5 incase you already have a VBCS instance provisioned)
