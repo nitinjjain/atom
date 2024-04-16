@@ -97,9 +97,9 @@ This task involves creating REST service which will be used by ODA to connect to
     * **Body**
     ```
     {
-        "compartmentId": "ocid1.compartment.oc1..XXXXXXXXXXX",
+        "compartmentId": "ocid1.compartment.oc1..**************",
         "servingMode": {
-            "modelId": "ocid1.generativeaimodel.oc1.us-chicago-1.XXXXXXXX",
+            "modelId": "ocid1.generativeaimodel.oc1.us-chicago-1.***************",
             "servingType": "ON_DEMAND"
         },
         "inferenceRequest": {
@@ -121,7 +121,7 @@ This task involves creating REST service which will be used by ODA to connect to
 
    ![API Services](images/oci_rest_service_3.png)
 
-6. Step 1: Click on hamburger menu of OCI console and select "AI Services" > Generative AI
+6. Step 1: Click on hamburger menu of OCI console and select **AI Services** > **Generative AI**
 
    ![API Services](images/genai.png)
 
@@ -129,7 +129,7 @@ This task involves creating REST service which will be used by ODA to connect to
 
    ![API Services](images/generation_model_1.png)
 
-   Step 3: For the **Model** = 'cohere.command.v15.6', Click **View Model Details** and then click on **copy** link for the **cohere.command** and **version** = 15.6
+   Step 3: For the **Model**=**cohere.command.v15.6**, Click **View Model Details**, and then click on **copy** link for the **cohere.command** and **version** = 15.6
    
    ![API Services](images/generation_model_2.png)
     
