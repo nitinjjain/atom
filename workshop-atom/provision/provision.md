@@ -1,4 +1,4 @@
-# Provision of Oracle Digital Assistant & Visual Builder Instance
+# Provision of Oracle Digital Assistant & Visual Builder Instance & activate ATOM app
 
 ## Introduction
 
@@ -166,7 +166,10 @@ This task involves creating REST service which will be used by ODA to connect to
    
     ![Create Channel](images/skill_channel.png)
 
-## Task 6: Create VBCS Instance & embed ODA skill in VBCS Application (Please directly move to Step 5 incase you already have a VBCS instance provisioned)
+## Task 6: Create VBCS Instance & embed ODA skill in VBCS Application 
+
+> **Note**
+> Please directly move to Step 5 incase you already have a VBCS instance provisioned
 
 1. Step 1: Click on main hamburger menu on OCI cloud console and navigate Developer Services > Visual Builder
 
