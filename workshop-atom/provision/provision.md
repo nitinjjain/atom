@@ -2,11 +2,16 @@
 
 ## Introduction
 
-This lab will take you thru the step needed to provision Oracle Digital Assistant & Visual Builder Cloud Service
+This lab will take you thru the step needed to provision Oracle Digital Assistant & Visual Builder Cloud Service.
+The lab assumes that you don't have Oracle Digital Assistant & Visual Builder instance provisioned. Incase you already have these provisioned then you can skip the creation steps for ODA & VB Instance respectively.
 
-Estimated Time: 120 minutes
+> **Note**
+> * If you already have ODA Instance then start with **Task 2** onwards
+> * If you have VBCS instance then start with **Task 6** & **Step 4** onwards
 
-### About Oracle Digital Assistant (Optional)
+Estimated Time: 1hr 30minutes
+
+### About Oracle Digital Assistant 
 Oracle Digital Assistant delivers a complete AI platform to create conversational experiences for business applications through text, chat, and voice interfaces
 
 ### Objectives
@@ -114,7 +119,19 @@ This task involves creating REST service which will be used by ODA to connect to
     ```
 5. Step 5: Click **Test Request** to make sure the connection is successful
 
-   ![API Services](images/oci_rest_service_3.png) 
+   ![API Services](images/oci_rest_service_3.png)
+
+6. Step 1: Click on hamburger menu of OCI console and select "AI Services" > Generative AI
+
+   ![API Services](images/genai.png)
+
+   Step 2: Select Generation (under **Playground** heading)
+
+   ![API Services](images/generation_model_1.png)
+
+   Step 3: For the **Model** = 'cohere.command.v15.6', Click **View Model Details** and then click on **copy** link for the **cohere.command** and **version** = 15.6
+   
+   ![API Services](images/generation_model_2.png)
     
     > **Note**
     > * Retrieve the modelId (OCID) from OCI Gen AI Services Playground and use a compartmentId where the ODA is hosted inside
@@ -189,7 +206,7 @@ This task involves creating REST service which will be used by ODA to connect to
 
     > **Note**
     > * URI is the hostname of ODA instance provisioned in **Task 1**
-    > * channelId is created during **Task 5** - **Step 3**
+    > * ChannelId is created during **Task 5** - **Step 3**
 
 ## Acknowledgements
 **Author** - * **Nitin Jain**, Master Principal Cloud Architect, NACIE
